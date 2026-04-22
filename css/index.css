@@ -1,0 +1,131 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Changed from center to bring content to top */
+            min-height: 100vh;
+            padding: 40px 20px; /* Adjusted padding for better top spacing */
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px; /* Specific control over top distance */
+        }
+
+        .card-section {
+            text-align: center;
+        }
+
+        .card-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Container kaardii - Flexbox fayyadamna */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Diizaayinii Kaardii */
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Suuraa meeshaa */
+        .card img {
+            width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Key Features Heading */
+        .card h4 {
+            font-size: 1rem;
+            color: #6c5ce7;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* Key Features List Styling */
+        .card p {
+            font-size: 0.85rem;
+            color: #636e72;
+            margin-bottom: 25px;
+            text-align: left;
+            white-space: pre-line; /* This ensures line breaks in HTML are respected */
+            line-height: 1.8;
+        }
+
+        /* Batanii Bitachuu */
+        .card button {
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            margin-top: auto; /* Pushes button to bottom */
+        }
+
+        .card button:hover {
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            transform: scale(1.05);
+        }
+
+        /* Responsive - Bilbilaaf */
+        @media (max-width: 600px) {
+            .card-section h2 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+        }
